@@ -10,19 +10,20 @@ import com.alibaba.fastjson.JSONObject;
 
 public class GitHubApiTest {
 
-    private static final String GITHUB_TOKEN = "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";
-    private static final String GITHUB_BASE_URL = "https://github.tools.sap/api/v3";
+    private static final String GITHUB_TOKEN = "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";
+    private static final String GITHUB_BASE_URL = "https://api.github.com";
+
 
     public static void main(String[] args) {
-        String owner = "I758809";
-        String repo = "githubAPI_test";
-        int issueNumber = 3;  // 替换为实际 Issue 编号
-        String label = "bug";
+        String owner = "ysoup-lab";
+        String repo = "github_api_test";
+        int issueNumber = 1;  // 替换为实际 Issue 编号
+        String label = "enhancement";
 
         try {
-//            addLabelToIssue(owner, repo, issueNumber, label);
+            addLabelToIssue(owner, repo, issueNumber, label);
 //            getRepositoryInfo(owner, repo);
-            getPullRequestInfo(owner, repo, issueNumber);
+//            getPullRequestInfo(owner, repo, issueNumber);
         } catch (IOException e) {
             e.printStackTrace();
         }
